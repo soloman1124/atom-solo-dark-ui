@@ -1,7 +1,7 @@
 {
   "name": "atom-solo-dark-ui",
   "theme": "ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Theme for the solarized syntax",
   "license": "MIT",
   "repository": "https://github.com/soloman1124/atom-solo-dark-ui",
