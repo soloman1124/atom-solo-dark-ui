@@ -8,10 +8,10 @@
 @tab-bar-bottom-border-color: #111;
 
 .tab-bar {
-  height: @tab-height + @tab-top-padding + @tab-bottom-border-height;
+  height: 34px;
   background: @tab-bar-background-color;
   box-shadow: inset 0 -8px 8px -4px rgba(0,0,0, .15);
-  padding: 0 13px 0 10px;
+  padding: 0;
   box-sizing: border-box;
 
   &:after {
@@ -28,21 +28,21 @@
 
   .tab {
     position: relative;
-    top: @tab-top-padding;
+    top: 2px;
     height: @tab-height;
-    line-height: @tab-height;
+    line-height: 25px;
     color: @text-color;
     padding-left: 0;
     margin-left: 15px;
     border-top-right-radius: @tab-radius;
     box-shadow: inset -1px -1px 1px rgba(0,0,0, .05);
-    -webkit-transform: skewX(@tab-skew);
+    -webkit-transform: none;
     transition: color .1s ease-in;
     box-shadow: inset -1px 1px 0 @tab-border-color, 4px 0px 4px rgba(0,0,0,.1);
     border: none;
 
     &, &:before {
-      background-image: -webkit-linear-gradient(top, lighten(#333, 7%), #333);
+      background-image: -webkit-linear-gradient(top, @solar-color-base02, @solar-color-base03);
     }
 
     &:before {
@@ -51,17 +51,17 @@
       top: 0;
       left: -18px;
       height: @tab-height;
-      width: 40px;
+      width: 18px;
       border-top-left-radius: @tab-radius;
-      -webkit-transform: skewX(133deg);
+      -webkit-transform: none;
       box-shadow: inset 1px 1px 0 @tab-border-color, -4px 0px 4px rgba(0,0,0,.1);
       border: none;
     }
 
     .close-icon {
       z-index: 3;
-      line-height: @tab-height;
-      -webkit-transform: skewX(-@tab-skew);
+      line-height: 25px;
+      -webkit-transform: none;
       color: @text-color;
 
       &:hover {
@@ -80,7 +80,7 @@
     }
 
     .title{
-      -webkit-transform: skewX(-@tab-skew);
+      -webkit-transform: none;
     }
 
     &:first-child {
@@ -107,7 +107,7 @@
 
     &, &:before {
       background-image: -webkit-linear-gradient(top, lighten(@tab-background-color-active, 7%), @tab-background-color-active);
-      height: @tab-height + 1px;
+      height: 25px;
     }
 
     &:before {
